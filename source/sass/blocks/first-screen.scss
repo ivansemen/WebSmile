@@ -1,0 +1,32 @@
+.first-screen__title {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 53.64px;
+  color: $BlackBlue;
+}
+
+.first-screen__title::before {
+  content: "Laculis et mauris enim.";
+  color: $BlackBlue;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15.85px;
+}
+
+.first-screen__text {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39.01px;
+  color: $BlackBlue;
+}
+
+
+.first-screen__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: $BlackBlue;
+  border: 2px solid $BlackBlue;
+  border-radius: 2px;
+  padding: 6px 40px;
+}

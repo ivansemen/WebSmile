@@ -1,3 +1,13 @@
-body {
-  background-color: #ffffff;
-}
+@import "variables.scss";
+@import "global/page.scss";
+@import "global/fonts.scss";
+@import "mixins.scss";
+@import "blocks/header.scss";
+@import "blocks/first-screen.scss";
+@import "blocks/services.scss";
+@import "blocks/about-us.scss";
+@import "blocks/our-works.scss";
+@import "blocks/contact.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
+@import "blocks/portfolio.scss";
