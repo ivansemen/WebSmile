@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  background-color: $mainBackground;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.dot {
+  color: $blue;
+}

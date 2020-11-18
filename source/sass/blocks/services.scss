@@ -1,0 +1,31 @@
+.services__title {
+  @include title;
+}
+
+.services__list {
+  @include list;
+}
+
+.services-item {
+  width: 230.18px;
+  height: 197px;
+  background: linear-gradient(232.39deg, #54ffc1 0%, #c4fff1 100%);
+  border-radius: 8px;
+  box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.07);
+}
+
+.services-item:nth-child(2) {
+  background: linear-gradient(232.39deg, #42ff00 0%, #c9ff85 100%);
+}
+
+.services-item:nth-child(3) {
+  background: linear-gradient(232.39deg, #ff54b0 0%, #fa4751 100%);
+}
+
+.services-item:nth-child(4) {
+  background: linear-gradient(232.39deg, #ffb341 0%, #ff9e74 100%);
+}
+
+.services-item:last-child {
+  background: linear-gradient(232.39deg, #8e49ff 0%, #5b4fe3 100%);
+}
