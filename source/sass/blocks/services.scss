@@ -1,31 +1,118 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 182px;
+}
+
 .services__title {
   @include title;
+  width: 260px;
+  line-height: 52px;
+  margin-bottom: 141px;
 }
 
 .services__list {
   @include list;
+  width: 230px;
 }
 
 .services-item {
-  width: 230.18px;
+  width: 230px;
   height: 197px;
   background: linear-gradient(232.39deg, #54ffc1 0%, #c4fff1 100%);
   border-radius: 8px;
   box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.07);
+  margin-bottom: 86px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 67px;
+    height: 66px;
+    position: absolute;
+    background-image: url("../../img/web-development.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    left: 77px;
+    top: 60px;
+  }
 }
 
 .services-item:nth-child(2) {
   background: linear-gradient(232.39deg, #42ff00 0%, #c9ff85 100%);
+
+  &::before {
+    background-image: url("../../img/pencil.svg");
+    width: 72px;
+    height: 71px;
+  }
 }
 
 .services-item:nth-child(3) {
   background: linear-gradient(232.39deg, #ff54b0 0%, #fa4751 100%);
+
+  &::before {
+    background-image: url("../../img/creativity.svg");
+    width: 78px;
+    height: 81px;
+  }
 }
 
 .services-item:nth-child(4) {
   background: linear-gradient(232.39deg, #ffb341 0%, #ff9e74 100%);
+
+  &::before {
+    background-image: url("../../img/promotion.svg");
+    width: 78px;
+    height: 76px;
+  }
 }
 
 .services-item:last-child {
   background: linear-gradient(232.39deg, #8e49ff 0%, #5b4fe3 100%);
+
+  &::before {
+    background-image: url("../../img/theme.svg");
+    width: 67px;
+    height: 66px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .services__title {
+    width: 708px;
+    display: flex;
+    justify-content: center;
+    font-size: 46px;
+    padding-right: 8px;
+    margin-bottom: 157px;
+  }
+
+  .services__list {
+    width: 545px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .services {
+    margin-bottom: 109px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .services__title {
+    width: 836px;
+    padding-right: 0;
+    padding-left: 12px;
+  }
+
+  .services__list {
+    width: 836px;
+  }
+
+  .services {
+    margin-bottom: 100px;
+  }
 }

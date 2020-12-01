@@ -1,8 +1,14 @@
+.first-screen {
+  width: 280px;
+  margin: 0 auto;
+}
+
 .first-screen__title {
-  font-weight: 700;
-  font-size: 44px;
-  line-height: 53.64px;
-  color: $BlackBlue;
+  @include title;
+  line-height: 45px;
+  margin: 0;
+  position: relative;
+  margin-bottom: 3px;
 }
 
 .first-screen__title::before {
@@ -11,13 +17,18 @@
   font-weight: 300;
   font-size: 13px;
   line-height: 15.85px;
+  position: absolute;
+  bottom: 102px;
 }
 
 .first-screen__text {
   font-weight: 400;
   font-size: 32px;
-  line-height: 39.01px;
+  line-height: 39px;
   color: $BlackBlue;
+  margin: 0;
+  margin-bottom: 34px;
+  padding-right: 10px;
 }
 
 
@@ -29,4 +40,46 @@
   border: 2px solid $BlackBlue;
   border-radius: 2px;
   padding: 6px 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .first-screen {
+    width: 728px;
+  }
+
+  .first-screen__title {
+    padding-right: 387px;
+    font-size: 46px;
+    line-height: 56px;
+    margin-bottom: 0;
+
+    &::before {
+      font-size: 16px;
+      line-height: 20px;
+      left: 2px;
+      bottom: 107px;
+    }
+  }
+
+  .first-screen__text {
+    padding-right: 450px;
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: -6px;
+    margin-bottom: 23px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .first-screen {
+    width: 1010px;
+  }
+
+  .first-screen__title {
+    padding-right: 630px;
+  }
+
+  .first-screen__text {
+    padding-right: 750px;
+  }
 }

@@ -1,5 +1,5 @@
-.map__block {
-  background-color: yellow;
-  height: 10px;
-  width: 10px;
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
