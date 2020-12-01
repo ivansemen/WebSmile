@@ -1,14 +1,39 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 115px;
+}
+
+.inner-portfolio .header {
+  margin-bottom: 33px;
+}
+
 .portfolio__title {
   font-weight: 800;
-  font-size: 46px;
   line-height: 56px;
+  font-size: 36px;
   color: $BlackBlue;
+  margin-bottom: 117px;
 }
 
 .portfolio-block {
-  width: 93.62px;
-  height: 102.78px;
-  background-color: $BlackBlue;
+  width: 278px;
+  height: 234px;
+  margin-bottom: 162px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100px;
+    height: 16px;
+    position: absolute;
+    background-image: url("../../img/polygons.svg");
+    top: -72px;
+    left: 85px;
+  }
 }
 
 .portfolio-block__title {
@@ -17,4 +42,116 @@
   line-height: 18px;
   text-align: center;
   color: #ffffff;
+  background-color: $BlackBlue;
+  width: 93px;
+  height: 102px;
+  margin: 0;
+  order: 2;
+}
+
+.portfolio-block__example--aside {
+  width: 91px;
+  height: 234px;
+  background: $BlackBlue;
+}
+
+.portfolio-block__wrapper .portfolio-block__example {
+  width: 93px;
+  height: 66px;
+  background: lime;
+}
+
+@media (min-width: $tablet-width) {
+  .portfolio {
+    margin-bottom: 187px;
+  }
+
+  .portfolio-block {
+    width: 727px;
+    height: 381px;
+    margin-bottom: 260px;
+
+    &::before {
+      width: 155px;
+      height: 27px;
+      top: -136px;
+      left: 289px;
+      background-image: url("../../img/polygons-tablet.svg");
+    }
+  }
+
+  .portfolio-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .portfolio-block__example--aside {
+    width: 238px;
+    height: 381px;
+    background: green;
+  }
+
+  .portfolio-block__wrapper .portfolio-block__example {
+    width: 244px;
+    height: 107px;
+    background: yellow;
+  }
+
+  .portfolio-block__title {
+    width: 244px;
+    height: 166px;
+    font-size: 40px;
+    line-height: 48px;
+    color: transparent;
+    -webkit-text-stroke: 3px $mainBackground;
+  }
+
+  .inner-portfolio .header {
+    margin-bottom: 0;
+  }
+
+  .portfolio__title {
+    margin-top: 0;
+    font-size: 46px;
+    width: 728px;
+    margin-bottom: 233px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .portfolio-block {
+    width: 1214px;
+    height: 640px;
+    margin-bottom: 270px;
+
+    &::before {
+      width: 199px;
+      height: 35px;
+      top: -125px;
+      left: 507px;
+      background-image: url("../../img/polygons-desktop.svg");
+    }
+  }
+
+  .portfolio__title {
+    width: 1214px;
+    margin-bottom: 155px;
+  }
+
+  .portfolio-block__example--aside {
+    width: 398px;
+    height: 640px;
+    background: green;
+  }
+
+  .portfolio-block__wrapper .portfolio-block__example {
+    width: 408px;
+    height: 180px;
+    background: yellow;
+  }
+
+  .portfolio-block__title {
+    width: 408px;
+    height: 280px;
+    line-height: 56px;
+  }
 }

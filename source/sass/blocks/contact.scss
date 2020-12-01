@@ -1,6 +1,16 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 360px;
+}
+
 .contact__title {
   @include title;
   position: relative;
+  width: 280px;
+  margin-top: 0;
+  margin-bottom: 51px;
 }
 
 .contact__title::after {
@@ -8,7 +18,7 @@
   width: 91px;
   height: 2px;
   position: absolute;
-  bottom: 0;
+  top: 60px;
   left: 0;
   background-color: $blue;
 }
@@ -18,11 +28,26 @@
   line-height: 15px;
   color: $blue;
   font-weight: 600;
+  padding-left: 8px;
 }
 
-.form__wrapper input {
+.form {
+  width: 280px;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.form__input {
   border: 2px solid $blue;
   border-radius: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 14px;
 
   &::placeholder {
     font-weight: 500;
@@ -32,10 +57,101 @@
   }
 }
 
+.form__wrapper:nth-child(3) .form__input {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.form__input--message {
+  padding-bottom: 63px;
+}
+
 .form__button {
   border: 2px solid $blue;
   border-radius: 2px;
   color: $blue;
   background: none;
-  padding: 6px 40px;
+  padding: 9px 53px;
+  margin-top: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .contact__title {
+    width: 708px;
+    font-size: 46px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+
+    &::after {
+      left: 309px;
+      top: 64px;
+    }
+  }
+
+  .form {
+    width: 728px;
+    border: 2px solid $blue;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding-top: 30px;
+    min-height: 450px;
+  }
+
+  .form__container {
+    width: 660px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__input {
+    width: 281px;
+  }
+
+  .form__input--message {
+    padding-bottom: 94px;
+    width: 629px;
+  }
+
+  .form__button {
+    margin-left: 393px;
+    margin-top: 37px;
+  }
+
+  .form__wrapper {
+    margin-bottom: 19px;
+  }
+
+  .contact {
+    margin-bottom: 233px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    width: 1010px;
+  }
+
+  .contact {
+    margin-bottom: 199px;
+  }
+
+  .form__container {
+    width: 806px;
+  }
+
+  .form__button {
+    margin: 0 auto;
+    margin-top: 38px;
+  }
+
+  .form__input {
+    width: 324px;
+  }
+
+  .form__input--message {
+    width: 787px;
+  }
 }
