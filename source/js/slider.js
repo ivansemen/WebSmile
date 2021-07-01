@@ -1,9 +1,10 @@
-const WIDTH_DESKTOP = 1280;
-let sliderItem = document.getElementById('sliderItem');
-
-const sliderItems = document.querySelectorAll(".slider__item");
-console.log(sliderItems);
-
-if (document.documentElement.clientWidth >= WIDTH_DESKTOP) {
-  sliderItem.classList.remove('visually-hidden');
-}
+var swiper = new Swiper('.swiper-container', {
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'progressbar',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

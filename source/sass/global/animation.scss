@@ -1,0 +1,161 @@
+@keyframes swimmingTriangleAnimation {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(-10px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+/*
+@keyframes triangleAnimationFirst {
+  0% {
+    transform: scale(1) rotate(0) translatey(0px);
+  }
+
+  50% {
+    transform: scale(1.2) rotate(10deg) translatey(-5px);
+  }
+
+  100% {
+    transform: scale(1) rotate(0) translatey(0px);
+  }
+}
+
+
+@keyframes triangleAnimationSecond {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  50% {
+    transform: scale(0.7) rotate(10deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+
+@keyframes triangleAnimationThird {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  50% {
+    transform: scale(0.5) translatey(10px);
+  }
+
+  100% {
+    transform: scale(1) rotate(0) translatey(0);
+  }
+}
+*/
+
+@keyframes firstTriangleAnimation {
+  0% {
+    transform: translatey(0px) rotate(0);
+  }
+
+  50% {
+    transform: translatey(-10px) rotate(60deg);
+  }
+
+  100% {
+    transform: translatey(0px) rotate(0);
+  }
+}
+
+@keyframes secondTriangleAnimation {
+  0% {
+    transform: translatey(0px) rotate(0);
+  }
+
+  50% {
+    transform: translatey(-10px) rotate(-60deg);
+  }
+
+  100% {
+    transform: translatey(0px) rotate(0);
+  }
+}
+
+@keyframes thirdTriangleAnimation {
+  0% {
+    transform: translatey(0) rotate(0);
+  }
+
+  50% {
+    transform: translatey(10px) rotate(10deg);
+  }
+
+  100% {
+    transform: translatey(0) rotate(0);
+  }
+}
+
+
+@keyframes fourthTriangleAnimation {
+  0% {
+    transform: translatey(0) rotate(0);
+  }
+
+  50% {
+    transform: translatey(15px) rotate(60deg);
+  }
+
+  100% {
+    transform: translatey(0) rotate(0);
+  }
+}
+
+
+
+@keyframes lastMobileTriangleAnimation {
+  0% {
+    transform: translatey(0) rotate(0);
+  }
+
+  50% {
+    transform: translatey(-35px) rotate(80deg);
+  }
+
+  100% {
+    transform: translatey(0) rotate(0);
+  }
+}
+
+
+@keyframes firstTabletTriangleAnimation {
+  0% {
+    transform: translatey(0) rotate(0);
+  }
+
+  50% {
+    transform: translatey(-60px) rotate(10deg);
+  }
+
+  100% {
+    transform: translatey(0) rotate(0);
+  }
+}
+
+@keyframes lastTabletTriangleAnimation {
+  0% {
+    transform: translatex(0) translatey(0) rotate(0);
+  }
+
+  50% {
+    transform: translatex(-15px) translatey(-10px) rotate(-10deg);
+  }
+
+  100% {
+    transform: translatex(0) translatey(0) rotate(0);
+  }
+}

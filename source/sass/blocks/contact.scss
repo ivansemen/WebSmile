@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 360px;
+  position: relative;
 }
 
 .contact__title {
@@ -33,6 +34,7 @@
 
 .form {
   width: 280px;
+  position: relative;
 }
 
 .form__wrapper {
@@ -48,13 +50,33 @@
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 14px;
+  transition: border 0.3s;
+  color: $BlackBlue;
 
   &::placeholder {
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
     color: $blue;
+    transition: color 0.3s;
   }
+
+  &:focus,
+  &:hover {
+    border: 2px solid $BlackBlue;
+    transition: border 0.3s;
+  }
+}
+
+.form__input:focus {
+  &::placeholder {
+    color: $BlackBlue;
+    transition: color 0.3s;
+  }
+}
+
+.form__input:invalid {
+  border: 2px solid #fa4751;
 }
 
 .form__wrapper:nth-child(3) .form__input {
@@ -73,6 +95,38 @@
   background: none;
   padding: 9px 53px;
   margin-top: 15px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue;
+    color: $mainBackground;
+    transition: background-color 0.3s;
+  }
+}
+
+.form::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/triangles/triangle-contact.svg");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 43px;
+  bottom: -80px;
+  left: 20px;
+  animation: swimmingTriangleAnimation 6s ease-in-out infinite;
+}
+
+.form::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/triangles/triangle-1.svg");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 29px;
+  top: -180px;
+  right: 150px;
+  animation: swimmingTriangleAnimation 6s ease-in-out infinite;
 }
 
 @media (min-width: $tablet-width) {
@@ -96,6 +150,7 @@
     border-radius: 8px;
     padding-top: 30px;
     min-height: 450px;
+    position: relative;
   }
 
   .form__container {
@@ -104,6 +159,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../../img/triangles/triangle-contact-tablet.svg");
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 45px;
+      top: -127px;
+      right: 41px;
+      animation: swimmingTriangleAnimation 6s ease-in-out infinite;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../../img/triangles/triangle-contact-tablet2.svg");
+      background-repeat: no-repeat;
+      width: 60px;
+      height: 57px;
+      top: 552px;
+      right: 95px;
+      animation: swimmingTriangleAnimation 6s ease-in-out infinite;
+    }
   }
 
   .form__input {
@@ -127,6 +206,27 @@
   .contact {
     margin-bottom: 233px;
   }
+
+  .contact::before {
+    top: -53px;
+    left: 160px;
+    transform: rotate(-16deg);
+  }
+
+  .contact::after {
+    bottom: -85px;
+    left: 155px;
+  }
+
+  .form::after {
+    left: 133px;
+    bottom: -88px;
+  }
+
+  .form::before {
+    top: -180px;
+    right: 543px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -134,12 +234,41 @@
     width: 1010px;
   }
 
+  .form::before {
+    top: -193px;
+    right: 822px;
+  }
+
+  .form::after {
+    bottom: -76px;
+  }
+
   .contact {
     margin-bottom: 199px;
   }
 
+  .contact::before {
+    top: -46px;
+    left: 596px;
+  }
+
+  .contact::after {
+    bottom: -93px;
+    left: 591px;
+  }
+
   .form__container {
     width: 806px;
+
+    &::before {
+      right: 249px;
+      top: -142px;
+    }
+
+    &::after {
+      top: 541px;
+      right: 371px;
+    }
   }
 
   .form__button {

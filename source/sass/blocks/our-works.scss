@@ -3,154 +3,32 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 217px;
+  min-width: 0;
 }
 
 .our-works__title {
   @include title;
 }
 
-.slider {
-  position: relative;
-}
-
-.slider__list {
-  @include list;
-}
-
-.slider__item {
-  width: 244px;
-  min-height: 325px;
-  background-image: url("../../img/ourworksmobile.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.slider__title {
-  position: relative;
-
-  &::before {
-    content: "Web Design";
-    left: 52px;
-    top: 9px;
-    width: 141px;
-    height: 27px;
-    position: absolute;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 27px;
-    color: #ffffff;
-    z-index: 2;
-    -webkit-text-stroke: 1px $BlackBlue;
-  }
-
-  &::after {
-    content: "";
-    width: 244px;
-    height: 52px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 0 0 50px 50px;
-    position: absolute;
-    left: 0;
-    z-index: 1;
-  }
-}
-
-.slider__item:nth-child(2) .slider__title {
-  &::before {
-    content: "Web Development";
-    width: 218px;
-    left: 14px;
-  }
-}
-
-.slider__item:nth-child(3) .slider__title {
-  &::before {
-    content: "UX / UI Design";
-    width: 88px;
-    height: 55px;
-    top: 0;
-    left: 75px;
-  }
-}
-
-.slider__item:nth-child(4) .slider__title {
-  &::before {
-    content: "Branding";
-    width: 111px;
-    height: 34px;
-    top: 11px;
-    left: 66px;
-  }
-}
-
-.slider__control {
-  display: block;
-  width: 15px;
-  height: 26px;
-  background: none;
-  border: none;
-  background-repeat: no-repeat;
-}
-
-.slider__control--next {
-  background-image: url("../../img/btn-next.svg");
-  position: absolute;
-  right: -25px;
-  top: 165px;
-}
-
-.slider__control--prev {
-  background-image: url("../../img/btn-prev.svg");
-  position: absolute;
-  left: -25px;
-  top: 165px;
-}
 
 @media (min-width: $tablet-width) {
   .our-works {
-    margin-bottom: 266px;
+    margin-bottom: 286px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 550px;
+      background-color: $white;
+      position: absolute;
+      top: 170px;
+    }
   }
 
   .our-works__title {
     font-size: 46px;
-    margin-bottom: 28px;
-  }
-
-  .slider__item {
-    width: 500px;
-    min-height: 624px;
-    background-image: url("../../img/ourworkstablet.jpg");
-  }
-
-  .slider__title {
-    &::after {
-      width: 500px;
-      height: 72px;
-    }
-
-    &::before {
-      left: 166px;
-      top: 19px;
-      width: 174px;
-      height: 27px;
-      font-size: 26px;
-      line-height: 31px;
-    }
-  }
-
-  .slider__control {
-    width: 15px;
-    height: 26px;
-    top: 317px;
-  }
-
-  .slider__control--next {
-    right: -55px;
-  }
-
-  .slider__control--prev {
-    left: -55px;
+    margin-bottom: 46px;
   }
 }
 
@@ -159,46 +37,7 @@
     margin-bottom: 146px;
   }
 
-  .slider__item:nth-child(2) .slider__title {
-    &::before {
-      content: "Web Development";
-      width: 256px;
-      left: 123px;
-    }
-  }
-
-  .slider {
-    width: 1175px;
-  }
-
-  .slider__list {
-    display: flex;
-    margin: 0 auto;
-    width: 1080px;
-    justify-content: space-between;
-  }
-
-  .slider__title {
-    &::after {
-      width: 500px;
-      height: 79px;
-      top: -18px;
-    }
-
-    &::before {
-      top: 8px;
-    }
-  }
-
-  .slider__control--next {
-    right: 0;
-  }
-
-  .slider__control--prev {
-    left: 0;
-  }
-
-  .slider__control {
-    top: 307px;
+  .our-works__title {
+    margin-top: 36px;
   }
 }

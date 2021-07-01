@@ -7,6 +7,10 @@
   min-height: 260px;
 }
 
+.footer--dark-theme {
+  background-color: #0e0e0e;
+}
+
 .footer__wrapper {
   width: 280px;
   display: flex;
@@ -34,6 +38,21 @@
   font-weight: 500;
   font-size: 10px;
   line-height: 12px;
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: $blue;
+  transition: color 0.3s;
+}
+
+.footer__link svg {
+  transition: fill 0.3s;
+}
+
+.footer__link svg:hover {
+  fill: $blue;
+  transition: fill 0.3s;
 }
 
 .footer__special-name {
@@ -74,6 +93,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.footer__logo-image {
+  opacity: 1;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
 }
 
 @media (min-width: $tablet-width) {

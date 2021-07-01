@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 182px;
+  background-color: $white;
 }
 
 .services__title {
@@ -25,6 +26,7 @@
   box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.07);
   margin-bottom: 86px;
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -36,7 +38,55 @@
     background-position: 0 0;
     left: 77px;
     top: 60px;
+    opacity: 1;
+    transition: opacity 0.3s;
   }
+}
+
+.services-item__title {
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  font-weight: 800;
+  font-size: 26px;
+  color: $mainBackground;
+  text-align: center;
+  margin: 0;
+  top: 80px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.services-item__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.services-item:hover {
+  &::before {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+}
+
+.services-item:hover .services-item__title {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.services-item:first-child::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/triangles/triangle-lime-ourservices.svg");
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 21px;
+  top: -50px;
+  right: 30px;
+  animation: swimmingTriangleAnimation 6s ease-in-out infinite;
 }
 
 .services-item:nth-child(2) {
@@ -47,7 +97,20 @@
     width: 72px;
     height: 71px;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/triangles/triangle-lime-ourservices2.svg");
+    background-repeat: no-repeat;
+    width: 46px;
+    height: 46px;
+    left: -30px;
+    top: -50px;
+    animation: swimmingTriangleAnimation 6s ease-in-out infinite;
+  }
 }
+
 
 .services-item:nth-child(3) {
   background: linear-gradient(232.39deg, #ff54b0 0%, #fa4751 100%);
@@ -56,6 +119,18 @@
     background-image: url("../../img/creativity.svg");
     width: 78px;
     height: 81px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/triangles/triangle-blue-ourservices.svg");
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+    right: -30px;
+    top: -50px;
+    animation: swimmingTriangleAnimation 6s ease-in-out infinite;
   }
 }
 
@@ -66,6 +141,18 @@
     background-image: url("../../img/promotion.svg");
     width: 78px;
     height: 76px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/triangles/triangle-pink-ourservices.svg");
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 56px;
+    left: -30px;
+    top: -50px;
+    animation: swimmingTriangleAnimation 6s ease-in-out infinite;
   }
 }
 
@@ -99,6 +186,29 @@
   .services {
     margin-bottom: 109px;
   }
+
+  .services-item:first-child::after {
+    top: 230px;
+    right: 265px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .services-item:nth-child(2)::after {
+    left: -379px;
+    top: -75px;
+    transform: rotate(-27deg);
+  }
+
+  .services-item:nth-child(3)::after {
+    right: -273px;
+    top: -373px;
+  }
+
+  .services-item:nth-child(4)::after {
+    left: 168px;
+    top: 321px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -106,6 +216,7 @@
     width: 836px;
     padding-right: 0;
     padding-left: 12px;
+    margin-top: 85px;
   }
 
   .services__list {
@@ -114,5 +225,25 @@
 
   .services {
     margin-bottom: 100px;
+  }
+
+  .services-item:first-child::after {
+    top: -63px;
+    right: -660px;
+  }
+
+  .services-item:nth-child(2)::after {
+    top: -73px;
+    left: -301px;
+  }
+
+  .services-item:nth-child(3)::after {
+    right: 455px;
+    top: -117px;
+  }
+
+  .services-item:nth-child(4)::after {
+    left: 370px;
+    top: 102px;
   }
 }

@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 323px;
+  position: relative;
 }
 
 .about-us__title {
@@ -19,7 +20,7 @@
     width: 265px;
     height: 181px;
     position: absolute;
-    bottom: -427px;
+    bottom: -428px;
     right: 9px;
   }
 
@@ -65,8 +66,8 @@
       background-image: url("../../img/aboutustablet.png");
       width: 539px;
       height: 366px;
-      right: 89px;
-      bottom: -620px;
+      right: 91px;
+      bottom: -621px;
     }
 
     &::before {
@@ -89,6 +90,12 @@
 
   .about-us__link {
     margin: 0 auto;
+
+    &:hover {
+      color: $mainBackground;
+      background-color: $BlackBlue;
+      transition: all 0.3s;
+    }
   }
 
   .about-us {
@@ -114,9 +121,9 @@
       background-image: url("../../img/aboutusdesktop.png");
       width: 602px;
       height: 409px;
-      bottom: -260px;
+      bottom: -256px;
       right: 0;
-      left: 405px;
+      left: 406px;
     }
 
     &::before {
