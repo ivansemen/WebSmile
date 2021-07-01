@@ -1,0 +1,120 @@
+.body--dark-theme {
+  background-color: $black;
+  color: $mainBackground;
+}
+
+
+.title--dark-theme,
+.text--dark-theme {
+  color: $mainBackground;
+}
+
+.form__input--dark-theme {
+  background-color: $black;
+  border: 2px solid $mainBackground;
+
+  &::placeholder {
+    color: $mainBackground;
+  }
+}
+
+
+.form--dark-theme {
+  border-color: $mainBackground;
+}
+
+
+.form__button--dark-theme {
+  border: 2px solid $mainBackground;
+  color: $mainBackground;
+
+  &:hover {
+    background-color: $mainBackground;
+    color: $black;
+  }
+}
+
+.form__label--dark-theme {
+  color: $mainBackground;
+}
+
+.dot--dark-theme {
+  color: $BlackBlue;
+}
+
+.contact__title--dark-theme::after {
+  background-color: $mainBackground;
+}
+
+
+.text--dark-theme {
+  color: $mainBackground;
+}
+
+.btn--dark-theme {
+  border: 2px solid $mainBackground;
+  color: $mainBackground;
+}
+
+
+.about-us__title--dark-theme::before {
+  border: 2px solid $mainBackground;
+}
+
+.first-screen__title--dark-theme::before,
+.main-nav__link--dark-theme {
+  color: $mainBackground;
+}
+
+.inner-about-us--dark-theme {
+  background-color: $black;
+}
+
+.biography__text--dark-theme {
+  color: $BlackBlue;
+}
+
+
+.portfolio-block__title--dark-theme {
+  background-color: $black;
+}
+
+.main-nav--dark-theme {
+  background-color: $black;
+}
+
+.main-nav__container--dark-theme::before {
+  background-color: $black;
+}
+
+.main-nav__logo-link--dark-theme {
+  background-color: $blue;
+}
+
+.main-nav__label--dark-theme {
+  &::after {
+    right: 100px;
+  }
+}
+
+.header__nav-button--dark-theme {
+  background-color: $mainBackground;
+
+  &::after {
+    background-color: $mainBackground;
+  }
+}
+
+.services--dark-theme {
+  background-color: $black;
+}
+
+.our-works--dark-theme::after {
+  background-color: $black;
+}
+
+@media (max-width: $tablet-width) {
+  .main-nav__item--dark-theme {
+    border-bottom: 1px solid $mainBackground;
+  }
+}

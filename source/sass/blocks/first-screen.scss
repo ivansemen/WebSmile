@@ -1,6 +1,7 @@
 .first-screen {
   width: 280px;
   margin: 0 auto;
+  position: relative;
 }
 
 .first-screen__title {
@@ -40,6 +41,88 @@
   border: 2px solid $BlackBlue;
   border-radius: 2px;
   padding: 6px 40px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    color: $mainBackground;
+    background-color: $BlackBlue;
+    transition: background-color 0.3s;
+  }
+}
+
+.first-screen__animation-triangles {
+  position: absolute;
+  width: 92px;
+  height: 188px;
+  top: 92px;
+  right: 0;
+}
+
+.first-screen__triangle {
+  display: none;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+
+.first-screen__triangle:first-child {
+  display: block;
+  background-image: url("../../img/triangles/triangle-1.svg");
+  width: 37px;
+  height: 33px;
+  top: 2px;
+  right: 13px;
+  animation: firstTriangleAnimation 6s ease-in-out infinite;
+}
+
+.first-screen__triangle:nth-child(2) {
+  display: block;
+  background-image: url("../../img/triangles/triangle-2.svg");
+  width: 47px;
+  height: 47px;
+  top: 27px;
+  right: 10px;
+  animation: thirdTriangleAnimation 6s ease-in-out infinite;
+}
+
+.first-screen__triangle:nth-child(3) {
+  display: block;
+  background-image: url("../../img/triangles/triangle-3.svg");
+  width: 30px;
+  height: 30px;
+  top: 95px;
+  right: 42px;
+  animation: firstTriangleAnimation 6s ease-in-out infinite;
+}
+
+.first-screen__triangle:nth-child(4) {
+  display: block;
+  background-image: url("../../img/triangles/triangle-4.svg");
+  width: 18px;
+  height: 18px;
+  top: 109px;
+  right: 19px;
+  animation: fourthTriangleAnimation 5.5s ease-in-out infinite;
+}
+
+.first-screen__triangle:nth-child(5) {
+  display: block;
+  background-image: url("../../img/triangles/triangle-5.svg");
+  width: 28px;
+  height: 28px;
+  top: 133px;
+  right: 40px;
+  animation: fourthTriangleAnimation 6s ease-in-out infinite;
+}
+
+.first-screen__triangle:nth-child(6) {
+  display: block;
+  background-image: url("../../img/triangles/triangle-6.svg");
+  width: 22px;
+  height: 22px;
+  top: 156px;
+  right: 78px;
+  animation: lastMobileTriangleAnimation 6s ease-in-out infinite;
 }
 
 @media (min-width: $tablet-width) {
@@ -68,6 +151,169 @@
     margin-top: -6px;
     margin-bottom: 23px;
   }
+
+  .first-screen__triangle:first-child {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-1.svg");
+    width: 340px;
+    height: 325px;
+    top: -290px;
+    right: 0;
+    animation: firstTabletTriangleAnimation 15s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:nth-child(2) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-2.svg");
+    width: 23px;
+    height: 23px;
+    top: -177px;
+    right: 212px;
+    animation: firstTriangleAnimation 7.2s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:nth-child(3) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-3.svg");
+    width: 32px;
+    height: 38px;
+    top: -145px;
+    right: 240px;
+    animation: secondTriangleAnimation 7.2s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:nth-child(4) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-4.svg");
+    width: 28px;
+    height: 33px;
+    top: -105px;
+    right: 225px;
+    animation: firstTriangleAnimation 7.2s ease-in-out infinite;
+
+  }
+
+  .first-screen__triangle:nth-child(5) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-5.svg");
+    width: 21px;
+    height: 23px;
+    top: -97px;
+    right: 262px;
+    animation: fourthTriangleAnimation 7.2s ease-in-out infinite;
+
+  }
+
+  .first-screen__triangle:nth-child(6) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-6.svg");
+    width: 46px;
+    height: 53px;
+    top: -78px;
+    right: 282px;
+    animation: firstTriangleAnimation 7.2s ease-in-out infinite;
+
+  }
+
+  .first-screen__triangle:nth-child(7) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-7.svg");
+    width: 48px;
+    height: 48px;
+    top: -45px;
+    right: 218px;
+    animation: firstTriangleAnimation 7.2s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:nth-child(8) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-8.svg");
+    width: 38px;
+    height: 45px;
+    top: -10px;
+    right: 223px;
+    animation: firstTriangleAnimation 7.2s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:nth-child(9) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-9.svg");
+    width: 49px;
+    height: 46px;
+    top: 40px;
+    right: 193px;
+    animation: secondTriangleAnimation 7.2s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:nth-child(10) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-10.svg");
+    width: 48px;
+    height: 55px;
+    top: 80px;
+    right: 180px;
+    animation: thirdTriangleAnimation 7.2s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:nth-child(11) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-11.svg");
+    width: 53px;
+    height: 46px;
+    top: 114px;
+    right: 116px;
+    animation: fourthTriangleAnimation 7.2s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:nth-child(12) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-12.svg");
+    width: 24px;
+    height: 21px;
+    top: 163px;
+    right: 162px;
+    animation: firstTriangleAnimation 7.2s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:nth-child(13) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-13.svg");
+    width: 34px;
+    height: 28px;
+    top: 161px;
+    right: 192px;
+    animation: fourthTriangleAnimation 7.2s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:nth-child(14) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-14.svg");
+    width: 37px;
+    height: 32px;
+    top: 198px;
+    right: 173px;
+    animation: thirdTriangleAnimation 7.2s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:nth-child(15) {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-15.svg");
+    width: 23px;
+    height: 23px;
+    top: 243px;
+    right: 208px;
+    animation: fourthTriangleAnimation 7.2s ease-in-out infinite;
+  }
+
+  .first-screen__triangle:last-child {
+    display: block;
+    background-image: url("../../img/triangles-fs-tablet/triangle-16.svg");
+    width: 299px;
+    height: 326px;
+    top: -48px;
+    right: 235px;
+    animation: lastTabletTriangleAnimation 7s ease-in-out infinite;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -81,5 +327,149 @@
 
   .first-screen__text {
     padding-right: 750px;
+  }
+
+  .first-screen__triangle:first-child {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-1.svg");
+    width: 570px;
+    height: 530px;
+    top: -310px;
+    right: -60px;
+  }
+
+  .first-screen__triangle:nth-child(2) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-2.svg");
+    width: 35px;
+    height: 35px;
+    top: -139px;
+    right: 316px;
+  }
+
+  .first-screen__triangle:nth-child(3) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-3.svg");
+    width: 49px;
+    height: 57px;
+    top: -94px;
+    right: 357px;
+  }
+
+  .first-screen__triangle:nth-child(4) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-4.svg");
+    width: 43px;
+    height: 46px;
+    top: -32px;
+    right: 333px;
+  }
+
+  .first-screen__triangle:nth-child(5) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-5.svg");
+    width: 31px;
+    height: 36px;
+    top: -22px;
+    right: 391px;
+  }
+
+  .first-screen__triangle:nth-child(6) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-6.svg");
+    width: 69px;
+    height: 79px;
+    top: 9px;
+    right: 422px;
+  }
+
+  .first-screen__triangle:nth-child(7) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-7.svg");
+    width: 73px;
+    height: 73px;
+    top: 60px;
+    right: 326px;
+  }
+
+  .first-screen__triangle:nth-child(8) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-8.svg");
+    width: 70px;
+    height: 70px;
+    top: 115px;
+    right: 321px;
+  }
+
+  .first-screen__triangle:nth-child(9) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-9.svg");
+    width: 70px;
+    height: 70px;
+    top: 188px;
+    right: 290px;
+  }
+
+  .first-screen__triangle:nth-child(10) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-10.svg");
+    width: 74px;
+    height: 77px;
+    top: 250px;
+    right: 271px;
+  }
+
+  .first-screen__triangle:nth-child(11) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-11.svg");
+    width: 81px;
+    height: 69px;
+    top: 299px;
+    right: 169px;
+  }
+
+  .first-screen__triangle:nth-child(12) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-12.svg");
+    width: 34px;
+    height: 31px;
+    top: 374px;
+    right: 243px;
+  }
+
+  .first-screen__triangle:nth-child(13) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-13.svg");
+    width: 49px;
+    height: 42px;
+    top: 370px;
+    right: 288px;
+  }
+
+  .first-screen__triangle:nth-child(14) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-14.svg");
+    width: 53px;
+    height: 48px;
+    top: 427px;
+    right: 259px;
+  }
+
+  .first-screen__triangle:nth-child(15) {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-15.svg");
+    width: 35px;
+    height: 35px;
+    top: 496px;
+    right: 309px;
+  }
+
+  .first-screen__triangle:last-child {
+    display: block;
+    background-image: url("../../img/triangles-fs-desktop/triangle-16.svg");
+    width: 530px;
+    height: 530px;
+    top: 53px;
+    right: 272px;
   }
 }

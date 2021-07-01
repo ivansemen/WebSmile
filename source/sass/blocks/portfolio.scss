@@ -17,23 +17,17 @@
   margin-bottom: 117px;
 }
 
-.portfolio-block {
-  width: 278px;
-  height: 234px;
+.portfolio__slider {
+  width: 280px;
   margin-bottom: 162px;
-  display: flex;
-  align-items: flex-end;
-  position: relative;
+}
 
-  &::before {
-    content: "";
-    width: 100px;
-    height: 16px;
-    position: absolute;
-    background-image: url("../../img/polygons.svg");
-    top: -72px;
-    left: 85px;
-  }
+.portfolio-block {
+  width: 280px;
+  height: 234px;
+  position: relative;
+  background-image: url("../../img/portfolio-work1.jpg");
+  margin-bottom: 40px;
 }
 
 .portfolio-block__title {
@@ -47,18 +41,21 @@
   height: 102px;
   margin: 0;
   order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+  bottom: 40px;
+  left: 93.5px;
 }
 
-.portfolio-block__example--aside {
-  width: 91px;
-  height: 234px;
-  background: $BlackBlue;
-}
-
-.portfolio-block__wrapper .portfolio-block__example {
-  width: 93px;
-  height: 66px;
-  background: lime;
+.decorate-triangle {
+  background-image: url("../../img/polygons.svg");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 17px;
+  padding-bottom: 50px;
 }
 
 @media (min-width: $tablet-width) {
@@ -66,34 +63,14 @@
     margin-bottom: 187px;
   }
 
+  .portfolio__slider {
+    width: 728px;
+  }
+
   .portfolio-block {
-    width: 727px;
-    height: 381px;
-    margin-bottom: 260px;
-
-    &::before {
-      width: 155px;
-      height: 27px;
-      top: -136px;
-      left: 289px;
-      background-image: url("../../img/polygons-tablet.svg");
-    }
-  }
-
-  .portfolio-block:last-child {
-    margin-bottom: 0;
-  }
-
-  .portfolio-block__example--aside {
-    width: 238px;
-    height: 381px;
-    background: green;
-  }
-
-  .portfolio-block__wrapper .portfolio-block__example {
-    width: 244px;
-    height: 107px;
-    background: yellow;
+    width: 728px;
+    height: 430px;
+    background-image: url("../../img/portfolio-work1-tablet.jpg");
   }
 
   .portfolio-block__title {
@@ -103,6 +80,21 @@
     line-height: 48px;
     color: transparent;
     -webkit-text-stroke: 3px $mainBackground;
+    transition: background-color 0.3s;
+    left: 242px;
+
+    &:hover {
+      background-color: $blue;
+      transition: background-color 0.3s;
+    }
+
+    &::before {
+      width: 155px;
+      height: 27px;
+      top: -136px;
+      left: 289px;
+      background-image: url("../../img/polygons-tablet.svg");
+    }
   }
 
   .inner-portfolio .header {
@@ -115,13 +107,36 @@
     width: 728px;
     margin-bottom: 233px;
   }
+
+  .decorate-triangle {
+    background-image: url("../../img/polygons-tablet.svg");
+    width: 158px;
+    height: 35px;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .portfolio__slider {
+    width: 1214px;
+  }
+
   .portfolio-block {
     width: 1214px;
     height: 640px;
-    margin-bottom: 270px;
+    background-image: url("../../img/portfolio-work1-desktop.jpg");
+  }
+
+  .portfolio__title {
+    width: 1214px;
+    margin-bottom: 155px;
+  }
+
+
+  .portfolio-block__title {
+    width: 408px;
+    height: 280px;
+    line-height: 56px;
+    left: 403px;
 
     &::before {
       width: 199px;
@@ -132,26 +147,9 @@
     }
   }
 
-  .portfolio__title {
-    width: 1214px;
-    margin-bottom: 155px;
-  }
-
-  .portfolio-block__example--aside {
-    width: 398px;
-    height: 640px;
-    background: green;
-  }
-
-  .portfolio-block__wrapper .portfolio-block__example {
-    width: 408px;
-    height: 180px;
-    background: yellow;
-  }
-
-  .portfolio-block__title {
-    width: 408px;
-    height: 280px;
-    line-height: 56px;
+  .decorate-triangle {
+    background-image: url("../../img/polygons-desktop.svg");
+    width: 200px;
+    height: 35px;
   }
 }
